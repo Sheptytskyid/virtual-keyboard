@@ -18,10 +18,7 @@ export default class Key {
   }
 
   char(capsOn) {
-    if (this.value) {
-      return this.value;
-    }
-    return this.label(capsOn);
+    return this.value ? this.value : this.label(capsOn);
   }
 
   label(capsOn) {

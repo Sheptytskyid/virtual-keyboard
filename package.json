@@ -1,7 +1,7 @@
 {
   "name": "virtual-keyboard",
   "version": "1.0.0",
-  "description": "Solution to the RSS virtual keyboard task",
+  "description": "Virtual Keyboard for Windows OS family",
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
