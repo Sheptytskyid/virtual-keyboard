@@ -1,0 +1,88 @@
+@import "~normalize.css";
+@import 'variables';
+@import 'reset';
+
+.textBox {
+  display: block;
+  width: 100%;
+  max-width: 890px;
+  height: 100px;
+  margin: 20px auto;
+  padding: 10px;
+  background: $color-labels;
+  border-radius: 5px;
+  color: $color-bg;
+  font-size: 10pt;
+  letter-spacing: 1px;
+}
+
+.textBox::placeholder {
+  font-family: Consolas, sans-serif;
+  font-size: 10pt;
+  color: $color-bg-transparent;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20px);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  min-width: 900px;
+}
+
+.key {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border: 1px solid $color-labels;
+  color: $color-labels;
+  border-radius: 5px;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: $color-key-bg-active;
+  }
+
+  &_active {
+    background: $color-key-bg-active;
+    color: $color-bg;
+  }
+
+  &_size {
+    &_2 {
+      grid-column: span 4;
+    }
+
+    &_6 {
+      grid-column: span 12;
+    }
+  }
+
+  &_row {
+    &_1 {
+      grid-row: 1 / 2;
+    }
+
+    &_2 {
+      grid-row: 2 / 3;
+    }
+
+    &_3 {
+      grid-row: 3 / 4;
+    }
+
+    &_4 {
+      grid-row: 4 / 5;
+    }
+
+    &_5 {
+      grid-row: 5 / 6;
+    }
+  }
+}
